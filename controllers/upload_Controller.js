@@ -5,7 +5,7 @@ const directoryPath = path.join(__dirname, "../uploads");
 module.exports.uploadPage = (req, res)=>{
     fs.readdir(directoryPath, (err, files) => {
         if (err) {
-            return console.log("Unable to scan directory: " + err);
+            return console.error("Unable to scan directory: " + err);
         }   
         return res.render('upload', {
             file: files,
@@ -16,7 +16,7 @@ module.exports.uploadPage = (req, res)=>{
 module.exports.uploadFile = (req, res)=>{
     fs.readdir(directoryPath, (err, files) => {
         if (err) {
-            return console.log("Unable to scan directory: " + err);
+            return console.error("Unable to scan directory: " + err);
         }
         return res.render('upload', {
             file: files,

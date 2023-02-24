@@ -4,7 +4,10 @@ require('dotenv').config()
 const port = process.env.PORT ||8000;
 const path = require('path');
 const expressLayouts = require('express-ejs-layouts');
-const multer  = require('multer')
+const multer  = require('multer');
+const cors = require('cors');
+
+app.use(cors())
 
 // view engine
 app.set('view engine', 'ejs');
