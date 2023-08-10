@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 require('dotenv').config()
-const port = process.env.PORT ||8000;
+const port = process.env.PORT ||8080;
 const path = require('path');
 const expressLayouts = require('express-ejs-layouts');
 const multer  = require('multer');
